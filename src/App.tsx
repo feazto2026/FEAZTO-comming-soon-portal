@@ -105,7 +105,7 @@ export default function App() {
               <div className="coming-soon-hero-stage">
                 <div className="coming-soon-supertitle">A NEW FOOD EXPERIENCE IS ON ITS WAY</div>
                 <h1 id="hero-main-title" className="grand-coming-soon-title">
-                  <span className="sr-only">COMING SOON</span>
+                  <span className="sr-only">Feazto — Food, Culture, Connect | Coming Soon</span>
                   <WarpText
                     text="COMING SOON"
                     segments={[
