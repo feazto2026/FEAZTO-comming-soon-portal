@@ -4,13 +4,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Prefer HTTPS.
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-  # Use the canonical apex domain.
+  # Canonical apex domain (redirects www to https://feazto.com in a single hop)
   RewriteCond %{HTTP_HOST} ^www\.feazto\.com$ [NC]
   RewriteRule ^ https://feazto.com%{REQUEST_URI} [R=301,L]
+
+  # Enforce HTTPS (compatible with direct SSL and proxy-terminated SSL)
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
   # SPA fallback: serve real files/directories directly, otherwise route to index.html.
   RewriteCond %{REQUEST_FILENAME} !-f

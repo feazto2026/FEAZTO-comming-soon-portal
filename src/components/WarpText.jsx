@@ -443,7 +443,9 @@ const WarpText = ({
       gl = renderer.gl;
     } catch (error) {
       console.warn('WarpText: WebGL could not be initialized.', error);
-      setFailed(true);
+      queueMicrotask(() => {
+        setFailed(true);
+      });
       return undefined;
     }
 
