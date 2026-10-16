@@ -27,55 +27,62 @@ export default function App() {
           {/* Animated Heritage Chariot & Subtle Floating Food Doodles */}
           <div className="chariot-bg-stage" aria-hidden="true">
             <img
-              src="/chariot-cutout.png"
+              src="/chariot-cutout.webp"
               alt=""
               className="chariot-moving-asset"
               width="548"
               height="903"
+              decoding="async"
             />
             {/* Realistic Floating Food Doodles (Gentle drifting, no spin, zero overlap) */}
             <div className="food-doodles-layer">
               <img
-                src="/doodle-dosa.png"
+                src="/doodle-dosa.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-top-left"
                 width="240"
                 height="160"
+                decoding="async"
               />
               <img
-                src="/doodle-biryani.png"
+                src="/doodle-biryani.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-top-right"
                 width="220"
                 height="195"
+                decoding="async"
               />
               <img
-                src="/doodle-idli.png"
+                src="/doodle-idli.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-mid-left"
                 width="200"
                 height="160"
+                decoding="async"
               />
               <img
-                src="/doodle-chai.png"
+                src="/doodle-chai.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-mid-right"
                 width="170"
                 height="175"
+                decoding="async"
               />
               <img
-                src="/doodle-naan.png"
+                src="/doodle-naan.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-bottom-left"
                 width="210"
                 height="145"
+                decoding="async"
               />
               <img
-                src="/doodle-samosa.png"
+                src="/doodle-samosa.webp"
                 alt=""
                 className="floating-food-doodle doodle-pos-bottom-right"
                 width="190"
                 height="130"
+                decoding="async"
               />
             </div>
           </div>
@@ -90,6 +97,7 @@ export default function App() {
                   className="hero-center-logo-img"
                   width="330"
                   height="97"
+                  decoding="async"
                 />
               </div>
 
@@ -162,29 +170,35 @@ export default function App() {
           {/* Large Brown Kolam Background Art (Ultra HD 1024x1024) */}
           <div className="showcase-kolam-bg-stage" aria-hidden="true">
             <img
-              src="/kolam-brown-hd.png"
+              src="/kolam-brown-hd.webp"
               alt=""
               className="showcase-bg-kolam-img"
               width="1024"
               height="1024"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
           {/* Grand Botanical Banana Trees spanning full vertical length along borders */}
           <div className="showcase-border-trees" aria-hidden="true">
             <img
-              src="/banana-tree-left.png"
+              src="/banana-tree-left.webp"
               alt=""
               className="showcase-tree tree-left"
               width="500"
               height="1400"
+              loading="lazy"
+              decoding="async"
             />
             <img
-              src="/banana-tree-right.png"
+              src="/banana-tree-right.webp"
               alt=""
               className="showcase-tree tree-right"
               width="500"
               height="1400"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -194,20 +208,24 @@ export default function App() {
               <div className="statement-card">
                 {/* Kolam Corner Art: Left & Right Halves with cut edge attached to card border */}
                 <img
-                  src="/kolam-1-right.png"
+                  src="/kolam-1-right.webp"
                   alt=""
                   aria-hidden="true"
                   className="card-kolam-corner card-kolam-left"
                   width="141"
                   height="281"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
-                  src="/kolam-1-left.png"
+                  src="/kolam-1-left.webp"
                   alt=""
                   aria-hidden="true"
                   className="card-kolam-corner card-kolam-right"
                   width="141"
                   height="281"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <div className="ornament-divider" aria-hidden="true">
@@ -233,20 +251,24 @@ export default function App() {
               <div className="connect-card">
                 {/* Kolam Corner Art: Left & Right Halves with cut edge attached to card border */}
                 <img
-                  src="/kolam-3-right.png"
+                  src="/kolam-3-right.webp"
                   alt=""
                   aria-hidden="true"
                   className="card-kolam-corner card-kolam-left"
                   width="141"
                   height="281"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <img
-                  src="/kolam-3-left.png"
+                  src="/kolam-3-left.webp"
                   alt=""
                   aria-hidden="true"
                   className="card-kolam-corner card-kolam-right"
                   width="142"
                   height="281"
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <h2 id="connect-heading" className="connect-headline">
@@ -257,9 +279,10 @@ export default function App() {
                 </p>
                 <div className="connect-actions">
                   <a
-                    href="mailto:hello@feazto.com?subject=feazto%20Early%20Access%20Inquiry"
+                    href="mailto:feazto26@gmail.com?subject=Feazto%20Early%20Access%20Inquiry"
                     className="contact-team-btn"
                     id="contact-email-btn"
+                    aria-label="Contact our Launch Team via email at feazto26@gmail.com"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -287,6 +310,8 @@ export default function App() {
                 className="footer-logo-img"
                 width="394"
                 height="116"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="footer-summary">A new way to discover food is coming.</p>
@@ -299,11 +324,13 @@ export default function App() {
         {/* Heritage Architecture Skyline Doodle Art resting along the lower base (single panorama) */}
         <div className="footer-skyline-container" aria-hidden="true">
           <img
-            src="/skyline-doodle.png"
+            src="/skyline-doodle.webp"
             alt=""
             className="footer-skyline-art"
             width="1376"
             height="451"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </footer>

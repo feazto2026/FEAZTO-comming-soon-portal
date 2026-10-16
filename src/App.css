@@ -371,6 +371,11 @@
   transform: translateY(0);
 }
 
+.primary-cta-button:focus-visible {
+  outline: 3px solid var(--color-ink-black);
+  outline-offset: 3px;
+}
+
 .hero-tagline-whisper {
   font-family: var(--font-sans);
   font-size: 14px;
@@ -627,6 +632,11 @@
 
 .contact-team-btn:active {
   transform: translateY(0);
+}
+
+.contact-team-btn:focus-visible {
+  outline: 3px solid var(--color-ink-black);
+  outline-offset: 3px;
 }
 
 /* ==================================================

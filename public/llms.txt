@@ -1,0 +1,19 @@
+# Feazto
+
+> Feazto is an upcoming regional food-tech ecosystem connecting consumers with authentic home kitchens, dedicated CareFe cloud kitchens, and verified Book-a-Cook on-demand culinary professionals.
+
+## Overview
+- **Name**: Feazto
+- **Tagline**: Food, Culture, Connect
+- **Website**: https://feazto.com/
+- **Status**: Coming Soon (Pre-Launch)
+- **Contact**: feazto26@gmail.com
+
+## Core Service Concepts
+1. **Regional Food Delivery**: A culinary discovery experience connecting customers with authentic regional cuisines, local food creators, and home-style cooking.
+2. **CareFe**: A dedicated cloud-kitchen concept designed to bring curated regional food concepts to life.
+3. **Book-a-Cook**: An on-demand culinary service enabling customers to book verified cooks for everyday meals, gatherings, and events.
+4. **Fiso AI**: An upcoming AI-assisted food discovery experience providing personalized dish recommendations and culinary search.
+
+## Brand Positioning
+Feazto celebrates regional culinary culture, heritage, and the feeling of home through modern, trustworthy food technology.
