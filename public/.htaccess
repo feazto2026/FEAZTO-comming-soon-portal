@@ -1,0 +1,36 @@
+# Feazto production routing and baseline security/cache headers.
+# Verify HTTPS and the www redirect after deployment before changing DNS.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Prefer HTTPS.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Use the canonical apex domain.
+  RewriteCond %{HTTP_HOST} ^www\.feazto\.com$ [NC]
+  RewriteRule ^ https://feazto.com%{REQUEST_URI} [R=301,L]
+
+  # SPA fallback: serve real files/directories directly, otherwise route to index.html.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>

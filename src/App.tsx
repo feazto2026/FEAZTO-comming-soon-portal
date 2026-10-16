@@ -1,8 +1,9 @@
 import WarpText from './components/WarpText';
 import './App.css';
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function App() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <div className="page-wrapper">
@@ -96,11 +97,12 @@ export default function App() {
               <div className="coming-soon-hero-stage">
                 <div className="coming-soon-supertitle">A NEW FOOD EXPERIENCE IS ON ITS WAY</div>
                 <h1 id="hero-main-title" className="grand-coming-soon-title">
+                  <span className="sr-only">COMING SOON</span>
                   <WarpText
                     text="COMING SOON"
                     segments={[
                       { text: 'COMING ', color: '#121212' },
-                      { text: 'SOON', color: '#FFFFFF' }
+                      { text: 'SOON', color: '#121212' }
                     ]}
                     color="#121212"
                     warpStrength={0.08}
@@ -289,7 +291,7 @@ export default function App() {
             </div>
             <p className="footer-summary">A new way to discover food is coming.</p>
             <p className="footer-copyright">
-              © {currentYear} feazto. All rights reserved.
+              © {CURRENT_YEAR} feazto. All rights reserved.
             </p>
           </div>
         </div>

@@ -691,7 +691,7 @@ const WarpText = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={`warp-text ${className}`.trim()} style={style} role="img" aria-label={text}>
+    <div ref={containerRef} className={`warp-text ${className}`.trim()} style={style} aria-hidden="true">
       {failed && (
         <span
           className="warp-text__fallback"
