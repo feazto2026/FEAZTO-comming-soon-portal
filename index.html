@@ -34,6 +34,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: Verified Facts Only -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://feazto.com/#organization",
+          "name": "Feazto",
+          "url": "https://feazto.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://feazto.com/feazto-logo-transparent.png"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://feazto.com/#website",
+          "url": "https://feazto.com/",
+          "name": "Feazto",
+          "publisher": {
+            "@id": "https://feazto.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
